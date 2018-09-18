@@ -15,7 +15,7 @@ class CreatePegawaisTable extends Migration
     public function up()
     {
         Schema::create('pegawais', function (Blueprint $table) {
-            $table->increments('num');
+            $table->increments('id');
             $table->bigInteger('nip')->unsigned();
             $table->string('nama',100);
             $table->string('gelar_depan',100)->nullable();
