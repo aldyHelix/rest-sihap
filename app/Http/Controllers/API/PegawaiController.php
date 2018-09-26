@@ -171,7 +171,9 @@ class PegawaiController extends Controller
             'golongan_id',
             'atasan_nip'
         ]);
-
+        if ($validator->fails()) {
+            return response()->json(['error'=>$validator->errors()], 401);            
+        }
         $datapeg = $request->all();
 
         $checknip = \App\Pegawai::where('nip', $datapeg['nip'])->count();
