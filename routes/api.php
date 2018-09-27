@@ -86,6 +86,19 @@ Route::post('/rapat/store', 'API\RapatController@store');
 Route::post('/rapat/update/{id}', 'API\RapatController@update');
 Route::post('/rapat/delete/{id}', 'API\RapatController@destroy');
 
+//Laporan CRUD
+Route::get('/listlaporan', 'API\LaporanController@index');
+Route::get('/laporan/{id}', 'API\LaporanController@show');
+Route::post('/laporan/store', 'API\LaporanController@store');
+Route::post('/laporan/update/{id}', 'API\LaporanController@update');
+Route::post('/laporan/delete/{id}', 'API\LaporanController@destroy');
+
+//Penilaian CRUD
+Route::get('/listpenilaian', 'API\PenilaianController@index');
+Route::get('/penilaian/{id}', 'API\PenilaianController@show');
+Route::post('/penilaian/store', 'API\PenilaianController@store');
+Route::post('/penilaian/update/{id}', 'API\PenilaianController@update');
+Route::post('/penilaian/delete/{id}', 'API\PenilaianController@destroy');
 //this route managed by auth current login and show user details
 
 
